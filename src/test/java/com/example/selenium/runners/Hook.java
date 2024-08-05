@@ -167,7 +167,12 @@ public class Hook {
     }
 
     private void goToBaseUrl() {
-        driver.navigate().to(baseUrl);
+        try {
+            driver.navigate().to(baseUrl);
+            Thread.sleep(1000);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
 }

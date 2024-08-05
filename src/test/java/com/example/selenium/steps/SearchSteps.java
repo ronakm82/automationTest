@@ -10,12 +10,12 @@ public class SearchSteps {
     @Autowired
     private SearchPage searchPage;
 
-    @Given("^a user typing \"([^\"]*)\" in the search input$")
-    public void aUserTypingInTheSearchInput(String searchValue) {
-        searchPage.inputSearch(searchValue);
+    @Given("a user typing username and password in the login page")
+    public void aUserTypingInTheSearchInput() {
+        searchPage.enterCredentials();
     }
 
-    @When("^presses the search button$")
+    @When("^presses the submit button$")
     public void pressesTheSearchButton() {
         searchPage.pressSearchButton();
     }
